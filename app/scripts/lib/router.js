@@ -38,6 +38,8 @@ define(function (require, exports, module) {
   const PermissionsView = require('../views/permissions');
   const PpView = require('../views/pp');
   const ReadyView = require('../views/ready');
+  const RecoveryKeyConfirm = require('../views/recovery_key_confirm');
+  const RecoveryKeyResetPassword = require('../views/recovery_key_reset_password');
   const ReportSignInView = require('../views/report_sign_in');
   const ResetPasswordView = require('../views/reset_password');
   const SettingsView = require('../views/settings');
@@ -99,6 +101,8 @@ define(function (require, exports, module) {
       'oauth/signin(/)': 'onSignIn',
       'oauth/signup(/)': 'onSignUp',
       'primary_email_verified(/)': createViewHandler(ReadyView, { type: VerificationReasons.PRIMARY_EMAIL_VERIFIED }),
+      'recovery_key_confirm(/)': createViewHandler(RecoveryKeyConfirm),
+      'recovery_key_reset_password(/)': createViewHandler(RecoveryKeyResetPassword),
       'report_signin(/)': createViewHandler(ReportSignInView),
       'reset_password(/)': createViewHandler(ResetPasswordView),
       'reset_password_confirmed(/)': createViewHandler(ReadyView, { type: VerificationReasons.PASSWORD_RESET }),

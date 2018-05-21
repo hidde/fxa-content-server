@@ -24,6 +24,8 @@ module.exports = function () {
     'oauth/signin',
     'oauth/signup',
     'primary_email_verified',
+    'recovery_key_confirm',
+    'recovery_key_reset_password',
     'report_signin',
     'reset_password',
     'reset_password_confirmed',
