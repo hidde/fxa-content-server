@@ -72,6 +72,12 @@ define(function (require, exports, module) {
     }
   }
 
+  function wrapAsyncAssertion(fn, done) {
+    return function () {
+      wrapAssertion(fn, done);
+    };
+  }
+
   function createRandomString(length, base = 36) {
     let str = '';
     const alphabet = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -172,6 +178,7 @@ define(function (require, exports, module) {
     requiresFocus: requiresFocus,
     stubbedProfileClient: stubbedProfileClient,
     toSearchString: toSearchString,
-    wrapAssertion: wrapAssertion
+    wrapAssertion: wrapAssertion,
+    wrapAsyncAssertion
   };
 });

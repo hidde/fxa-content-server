@@ -19,6 +19,7 @@ const experimentGroupingRules = [
   require('./sentry'),
   require('./token-code'),
   require('./totp'),
+  require('./password-strength'),
 ].map(ExperimentGroupingRule => new ExperimentGroupingRule());
 
 class ExperimentChoiceIndex {
